@@ -1,0 +1,150 @@
+body{
+	color: rgba(var(--i1d,38,38,38),1);
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background: #fafafa;
+    overflow-y: scroll;
+}
+.content-control{
+    width: 1080px;
+    height: 1000px;
+    margin-left: 200px;
+    margin-right: auto;
+}
+.img{
+    margin-top: 150px;
+    float: left;
+    margin-left: 130px;
+}
+#i{
+    width: 300px;
+}
+.border{
+    float: right;
+    text-align: center;
+    margin-right: 250px;
+    margin-top: 70px;
+    color: grey;
+    border: none;
+    width: 350px;
+    background-color: white;
+}
+#insta{
+    font-size: 40px;
+    color: black;
+}
+.bold{
+    font-weight: bold;
+    font-weight: 600;
+    line-height: 20px;
+    font-size: 17px;
+    color: #999;
+    text-align: center;
+}
+#bold1{
+    width: 270px;
+    font-size: 20px;
+    margin-left: 30px;
+}
+#login{
+    width: 230px;
+    height: 30px;
+    background-color:#3897f0;
+    color: white;
+    font-family: Arial;
+    padding: 1px, 1px, 1px, 1px;
+    border: none;
+    border-radius: 3px;
+    margin-top: 8px;
+    font-weight: bold;
+}
+#ili{
+    font-size: 20px;
+}
+.inputs{
+    width: 220px;
+    height: 30px;
+    margin-top: 5px;
+    margin-left: 57px;
+    border-radius: 3px;
+    border: none;
+    border: 1px solid gray;
+    padding-left: 10px;
+    font-size: 15px;
+}
+#registr{
+    width: 235px;
+    height: 30px;
+    background-color:#3897f0;
+    color: white;
+    margin-top: 10px;
+    border: none;
+    border-radius: 3px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+#asd{
+    text-align: center;
+    width: 220px;
+    font-size: 17px;
+    margin-left: 60px;
+    margin-bottom: 40px;
+}
+.content2{
+    clear: both;
+    text-align: center;
+}
+.border2{
+    float: right;
+    text-align: center;
+    margin-right: 250px;
+    margin-top: 10px;
+    color:black;
+    border: none;
+    width: 350px;
+    background-color: white;
+}
+#pril{
+    margin-right: 50px;
+    float: right;
+    margin-top: 23px;
+}
+.qu{
+    clear: both;
+    margin-right: 280px;
+}
+.download{
+    clear: both;
+    float: right;
+    margin-top: 10px;
+}
+a{
+    text-decoration: none;
+}
+footer{
+	padding: 0 20px;
+}
+.footer{
+	padding: 38px 0;
+	font-size: 12px;
+    font-weight: 600;
+    margin: 0 auto;
+    text-transform: uppercase;
+    width: 100%;
+}
+ul{
+	margin-bottom: 3px;
+	list-style: none;
+}
+li{
+	display: inline-block;
+    margin-bottom: 7px;
+    margin-right: 16px;
+}
+a{
+    text-decoration: none;
+    color: #003569;
+}
+.year{
+	color: #999;
+	padding-left: 38px;
+}

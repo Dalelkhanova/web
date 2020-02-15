@@ -1,0 +1,73 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-color: #24292e;
+}
+nav{
+	border: 1px solid black;
+	color: grey;
+	background-color: black;
+	padding-left: 75px;
+}
+.container{
+	margin-left: 300px;
+	margin-top: 50px;
+}
+input{
+	padding-left: 10px;
+	border-radius: 4px;
+    border: 1px solid #d1d5da;
+    width: 600px;
+    height: 30px;
+    margin-left: 50px;
+}
+.addBtn{
+	color: white;
+	background: #245a9c;
+	margin-left: 20px;
+	border-radius: 4px;
+    border: 1px solid #d1d5da;
+    height: 35px;
+    width: 60px;
+    cursor: pointer;
+    padding-top: 7px;
+    padding-bottom: 9px;
+    padding-left: 10px;
+    padding-right: 12px;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	border-radius: 4px;
+    border: 1px solid #d1d5da;
+    width: 800px;
+    margin-top: 40px;
+    list-style-type: none;
+}
+
+ul li{
+	padding-left: 20px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-top: 1px solid #d1d5da;
+}
+li i{
+	float: right;
+	margin-right: 20px;
+	color: red;
+}
+li input{
+	height: 13px;
+	width: 15px;
+}
+.checked{
+	float: left;
+}
+
+.line{
+   text-decoration: line-through;
+}
+.delete{
+	float: right;
+	margin-right: 10px;
+}

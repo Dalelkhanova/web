@@ -1,0 +1,44 @@
+<h2>Rings</h2>
+<div class="product-list">
+<div *ngFor="let product of products">
+  <div  class="product">
+      <div class="image">
+        <div *ngIf="product.imgUrl">
+          <img [src]="product.imgUrl" class="img-fluid p-5"/>
+        </div>
+     </div>
+    
+      
+      <div class="product-details">
+        <h4>
+          <a href ="routerLink" [title]="product.name + 'details'">
+          {{ product.name }}
+         </a>
+        </h4>
+        <p class="price">{{ product.price | currency }}</p>
+      </div>
+      <div class="product-description">
+       <p class="desc" *ngIf="product.description">
+         Description: {{ product.description }}
+       </p>
+      </div> 
+      <h5 *ngIf="product.rating">
+        Rating: {{product.rating}}
+      </h5>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&display=popup&ref=plugin&src=like&kid_directed_site=0&app_id=113869198637480">
+        <button (click)="share()">
+          Share
+        </button>
+      </a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->

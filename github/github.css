@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+}
+.header{
+    width: 100%;
+    height: 80px;
+    color: hsla(0,0%,100%,.7);
+    background-color: #24292e;
+}
+.left1{
+    float: left;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+.right1{
+    float: right;
+    margin-top: -25px;
+    margin-right: 35px;
+    border-radius: 8px;
+}
+#search{
+    width: 200px;
+    height: 30px;
+    background: none;
+    border: 0;
+    background-color: hsla(0,0%,100%,.125);
+    border-radius: 3px;
+    padding-left: 5px;
+    margin-right: 8px;
+}
+.button{
+    width: 60px;
+    height: 30px;
+    background-color: rgb(53, 53, 53);
+    color: #fff;
+}
+#signin{
+    border: none;
+    background: transparent;
+}
+#signup{
+    border: 1px solid white;
+    border-radius: 3px;
+}
+.content{
+    width: 100%;
+    height: 1000px;
+    background: url(/images/modules/site/heroes/simple-codelines.svg),#2b3137;
+}
+.left2{
+    float: left;
+    margin-top: 200px;
+    margin-left: 200px;
+    font-weight: bold;
+}
+#built{
+    width: 300px;
+    font-size: 64px;
+    font-weight: 500;
+    color:#fff;
+}
+#aa{
+    margin-top: 20px;
+    width: 450px;
+    font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    font-weight: 400;
+    font-size: 20px;
+    color: hsla(0,0%,100%,.6);
+}
+.right2{
+    float: right;
+    margin-right: 250px;
+    margin-top: 110px;
+}
+.border{
+    padding: 40px 30px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+h3{
+    color: #24292e;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.inputs{
+    width: 400px;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #d1d5da;
+}
+.ppp{
+    width: 380px;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #24292e;
+}
+#konec{
+    margin-top: 20px;
+    color: #6a737d;
+}
+#signbutton{
+    background-color: rgb(17, 184, 17);
+    width: 400px;
+    height: 60px;
+    margin-top: 20px;
+    border: 1px solid rgb(17, 184, 17);
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+}
+.white{
+    color: white;
+}
+ul{
+    color: #fff;
+    padding-left: 15px;
+    padding-top: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+    display: flex!important;
+}
+li{
+    margin-right: 16px;
+}

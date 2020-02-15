@@ -1,0 +1,100 @@
+.body{
+	font: 13px/18px Tahoma,sans-serif,Arial,Helvetica;
+	margin:0;
+    background-color: #e7ebf0;
+}
+div {
+    display: block;
+}
+.nav{
+	background: #5682a3;
+    height: 226px;
+}
+.login{
+	border: 1px solid #999;
+	border-radius: 2px;
+	background-color: white;
+	position: relative;
+	left: 550px;
+	top: 175px;
+	width: 404px;
+	height: 339.6px;
+    
+
+}
+.head{
+	border: 1px solid #5682a3;
+	position: absolute;
+	bottom: 340px;
+	width: 404px;
+	height: 75px;
+}
+.next{
+	float: right;
+	font-size: 13px;
+    line-height: 20px;
+    padding: 27px 15px 28px;
+    display: inline-block;
+    color: #fff;
+    font-weight: 700;
+}
+.logo{
+	display: inline-block;
+    line-height: 30px;
+    padding: 1px 10px 22px;
+}
+.form{
+	background: #fff;
+    padding: 44px 65px;
+}
+.sign{
+	color: #222;
+    margin: 0 0 20px;
+    font-size: 15px;
+    font-weight: 700;
+}
+.pl{
+	color: #999;
+    margin: 15px 0 30px;
+    font-size: 13px;
+    line-height: 160%;
+}
+.country{
+	height: 50px;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0;
+    margin: 0 0 22px;
+}
+.cn{
+	font-weight: 400;
+    color: #999;
+}
+.kz{
+	color: black;
+}
+.code{
+	float: left;
+    width: 50px;
+    margin-right: 25px;
+}
+.num{
+	overflow: hidden;
+}
+.bottom{
+	padding-top: 22px;
+}
+.footer{
+	color: #84a2bc;
+    font-size: 13px;
+    line-height: 16px;
+    margin-top: 25px;
+    text-align: center;
+}
+.learn{
+	color: #84a2bc;
+    font-weight: 700;
+    text-decoration: none;
+}
+  
+
+
