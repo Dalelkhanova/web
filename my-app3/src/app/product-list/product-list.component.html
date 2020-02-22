@@ -11,7 +11,7 @@
       
       <div class="product-details">
         <h4>
-          <a href ="routerLink" [title]="product.name + 'details'">
+          <a href = "{{product.url}}" [title]="product.name + 'details'">
           {{ product.name }}
          </a>
         </h4>
@@ -25,7 +25,7 @@
       <h5 *ngIf="product.rating">
         Rating: {{product.rating}}
       </h5>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&display=popup&ref=plugin&src=like&kid_directed_site=0&app_id=113869198637480">
+      <a href="https://wa.me/?text={{product.url}}">
         <button (click)="share()">
           Share
         </button>
