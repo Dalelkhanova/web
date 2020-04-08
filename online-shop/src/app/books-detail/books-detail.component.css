@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     margin-top: 5%;
 }
-.booksItem>div {
+.booksItem {
     cursor: pointer;
     width: 55%;
 }
@@ -35,7 +35,7 @@ p,h2{
     width: 65%;
     border-color: rgb(201, 228, 221);
     border-width: 0px;
-    color: rgb(201, 228, 221);
+    color: black;
     font-weight: 600;
     letter-spacing: 1px;
     font-size: x-small;

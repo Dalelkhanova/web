@@ -8,8 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'online-shop';
 
-  topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
+
 }
