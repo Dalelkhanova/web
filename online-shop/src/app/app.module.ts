@@ -9,8 +9,8 @@ import { CartComponent } from './cart/cart.component';
 import { NavBottomComponent } from './nav-bottom/nav-bottom.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { CategoryDetailComponent } from './category-detail/category-detail.component';
-import { ClothesDetailComponent } from './clothes-detail/clothes-detail.component';
-import { ClothesListComponent } from './clothes-list/clothes-list.component';
+import { BooksDetailComponent } from './books-detail/books-detail.component';
+import { BooksListComponent } from './books-list/books-list.component';
 import { RegistrComponent } from './registr/registr.component';
 import { HomeComponent } from './home/home.component';
 
@@ -23,8 +23,8 @@ import { HomeComponent } from './home/home.component';
     NavBottomComponent,
     CategoriesComponent,
     CategoryDetailComponent,
-    ClothesDetailComponent,
-    ClothesListComponent,
+    BooksDetailComponent,
+    BooksListComponent,
     RegistrComponent,
     HomeComponent
   ],

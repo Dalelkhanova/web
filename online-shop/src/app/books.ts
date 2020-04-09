@@ -1,4 +1,4 @@
-export interface Clothes{ 
+export interface Books{ 
     id: number;
     name: String;
     imageLink: String;

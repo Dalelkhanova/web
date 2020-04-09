@@ -1,10 +1,10 @@
-.clothesItem{
+.booksItem{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     margin-top: 5%;
 }
-.clothesItem>div {
+.booksItem>div {
     cursor: pointer;
     width: 55%;
 }
@@ -40,11 +40,11 @@ p,h2{
     letter-spacing: 1px;
     font-size: x-small;
 }
-.clothDet{
+.bookDet{
     transform: translate(0%, 5%);
 }
 
-.clothesImage {
+.booksImage {
   width: 565px;
   height: 754px;
   background-position: center;
@@ -53,7 +53,7 @@ p,h2{
   transition-timing-function: ease;
 }
 
-.clothesImage:hover{
+.booksImage:hover{
   transform: scale(1.5);
 }
 

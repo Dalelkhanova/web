@@ -2,7 +2,7 @@
     text-align: center;
     color: gray;
 }
-.clothesClass {
+.booksClass {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -10,14 +10,14 @@
     margin-left: 5px;
     cursor: pointer;
 }
-.clothesItem{
+.booksItem{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
     padding-left: 0;
 }
-.clothesImage{
+.booksImage{
     width: 100%;
 }
 .categoryList{
@@ -30,7 +30,7 @@
 ul{
     display: flex;
     flex-direction: row;
-    margin-left: 8%;
+    margin-left: 13%;
 }
 
 .nameStyle{
@@ -46,7 +46,6 @@ ul{
 }
 #card{
     width: 25%;
-    height: 5%;
     border-width: 1px;
     border-color: burlywood;
     border-radius: 5px;
@@ -57,6 +56,6 @@ ul{
     text-align: center;
 }
 
-.clothList{
+.bookList{
     transform: translate(0%, 2%);
 }

@@ -1,28 +1,28 @@
 import { Injectable } from '@angular/core';
-import { Clothes } from './clothes';
+import { Books } from './books';
 import {Observable, of} from 'rxjs'
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
-  cart: Clothes[] = [];
+  cart: Books[] = [];
   constructor() { }
 
-  addClothesToCart(clothes: Clothes) {
-    this.cart.push(clothes)
+  addBooksToCart(books: Books) {
+    this.cart.push(books)
   }
 
-  getClothesFromCart(): Observable<Clothes[]> {
+  getBooksFromCart(): Observable<Books[]> {
     return of(this.cart);
   }
 
-  deleteClothesFromCart(clothes: Clothes){
+  deleteBooksFromCart(books: Books){
     for (let i = 0; i < this.cart.length; i++) {
-        if (this.cart[i].id == clothes.id) {
+        if (this.cart[i].id == books.id) {
             this.cart.splice(i,1)
         }
     }
-    this.cart.find(clothes => clothes.id == clothes.id)
+    this.cart.find(books => books.id == books.id)
   }
 }

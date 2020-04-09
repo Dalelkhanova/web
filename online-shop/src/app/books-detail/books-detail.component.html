@@ -1,0 +1,15 @@
+<div *ngFor = "let books of booksList">
+    <div *ngIf = "selectedBooksId == books.id" class= "booksItem">
+
+        <div class="zoomBOut">
+          <img [src]="books.imageLink" class = "booksImage">
+        </div>
+        <nav ><h2 class="text" id="name">{{books.name}}</h2>
+            <p id="price" class="text">{{books.price}}</p>
+            <p class="text">{{books.description}}</p>
+            <button (click)= "onAddToCart(books)" id="card">ADD TO CART</button>
+        </nav>
+        <div><img [src]="books.imageLink2"></div>
+        <div><img [src]="books.imageLink3"></div>
+    </div>
+</div>

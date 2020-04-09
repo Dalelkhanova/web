@@ -1,17 +1,17 @@
 <div id = "cart">
     <h2>Cart</h2>
-    <div *ngFor = "let clothes of clothesFromCart" class = "clothesClass">
-      <p>{{clothes.name}}</p>
+    <div *ngFor = "let books of booksFromCart" class = "booksClass">
+      <p>{{books.name}}</p>
       <h3>
-        <img [src]="clothes.imageLink" class = "clothesImage">
-        <p *ngIf = "clothes.description">
-          Description: {{clothes.description}}
+        <img [src]="books.imageLink" class = "booksImage">
+        <p *ngIf = "books.description">
+          Description: {{books.description}}
         </p>
         <p>
-          Price: {{clothes.price}}
+          Price: {{books.price}}
         </p>
-        <button (click)= "deleteClothesFromCart(clothes)" >Delete from cart</button>
+        <button (click)= "deleteBooksFromCart(books)" >Delete from cart</button>
       </h3>
-      <hr class = "clothesDivider">
+      <hr class = "booksDivider">
     </div>
   </div>

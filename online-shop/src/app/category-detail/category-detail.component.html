@@ -2,18 +2,17 @@
     <h2 id="title"></h2>
   
     <div class="window">
-      <div class="clothesItem">
-        <div *ngFor = "let cloth of clothes" class = "clothesClass">
+      <div class="booksItem">
+        <div *ngFor = "let book of books" class = "booksClass">
   
-          <img [src]="cloth.image || cloth.imageLink"
-               (mousemove)="cloth.image = cloth.imageLink2 "
-               (mouseleave)="cloth.image = cloth.imageLink" [routerLink]="['/clothes', cloth.id ]" class = "clothesImage">
-          <p (click)= "onSelect(cloth)" class="textBlock">
-            <a [routerLink]="['/clothes', cloth.id ]" class="nameStyle">{{cloth.name}}</a>
+          <img [src]="book.image || book.imageLink"
+               (mousemove)="book.image = book.imageLink2 "
+               (mouseleave)="book.image = book.imageLink" [routerLink]="['/books', book.id ]" class = "booksImage">
+          <p (click)= "onSelect(book)" class="textBlock">
+            <a [routerLink]="['/books', book.id ]" class="nameStyle">{{book.name}}</a>
             <br>
-            <a class="PriceStyle">
-              {{cloth.price}} тнг.</a><br>
-            <button (click)= "onAddToCart(cloth)" id="card">Add to Cart</button>
+            <a class="PriceStyle">{{book.price}} </a><br>
+            <button (click)= "onAddToCart(book)" id="card">Add to Cart</button>
           </p>
   
         </div>

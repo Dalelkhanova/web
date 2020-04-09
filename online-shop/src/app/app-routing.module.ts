@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CategoriesComponent } from './categories/categories.component';
-import { ClothesListComponent } from './clothes-list/clothes-list.component';
+import { BooksListComponent } from './books-list/books-list.component';
 import { CartComponent } from './cart/cart.component';
-import { ClothesDetailComponent } from './clothes-detail/clothes-detail.component';
+import { BooksDetailComponent } from './books-detail/books-detail.component';
 import { CategoryDetailComponent } from './category-detail/category-detail.component';
 import { RegistrComponent } from './registr/registr.component';
 import { LoginComponent } from './login/login.component';
@@ -14,9 +14,9 @@ const routes: Routes = [
   { path : '', component: HomeComponent},
   { path: 'categories', component: CategoriesComponent },
   { path: 'categories/:id', component: CategoryDetailComponent },
-  { path: 'clothes', component: ClothesListComponent },
+  { path: 'books', component: BooksListComponent },
   { path: 'cart', component: CartComponent },
-  { path: 'clothes/:clothesId', component: ClothesDetailComponent },
+  { path: 'books/:booksId', component: BooksDetailComponent },
   { path: 'registr', component: RegistrComponent },
   { path: 'login', component: LoginComponent }
 ];

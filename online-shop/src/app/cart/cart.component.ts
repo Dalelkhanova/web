@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
-import { Clothes } from '../clothes';
+import { Books } from '../books';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -9,19 +10,19 @@ import { Clothes } from '../clothes';
 })
 export class CartComponent implements OnInit {
 
-  clothesFromCart: Clothes[] = [];
+  booksFromCart: Books[] = [];
 
-  constructor(private cartService: CartService) { }
+  constructor(private route: ActivatedRoute, private cartService: CartService) { }
 
   ngOnInit(): void {
-    this.getClothesFromCart()
+    this.getBooksFromCart()
   }
 
-  getClothesFromCart(): void {
-    this.cartService.getClothesFromCart().subscribe( clothes => this.clothesFromCart = clothes)
+  getBooksFromCart(): void {
+    this.cartService.getBooksFromCart().subscribe( books => this.booksFromCart = books)
   }
 
-  deleteClothesFromCart(clothes: Clothes) {
-    this.cartService.deleteClothesFromCart(clothes)
+  deleteBooksFromCart(books: Books) {
+    this.cartService.deleteBooksFromCart(books)
   }
 }

@@ -1,7 +1,7 @@
 #title{
     text-align: center;
 }
-.clothesClass {
+.booksClass {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -9,14 +9,14 @@
     margin-left: 5px;
     cursor: pointer;
 }
-.clothesItem{
+.booksItem{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
     padding-left: 0;
 }
-.clothesImage{
+.booksImage{
     width: 100%;
 }
 .categoryList{
@@ -43,7 +43,6 @@ ul{
 }
 #card{
     width: 25%;
-    height: 5%;
     border-width: 1px;
     border-color: burlywood;
     border-radius: 5px;

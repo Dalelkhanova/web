@@ -1,8 +1,8 @@
 nav {
     width: 100%;
     margin-right: 5%;
-    background-color: white;
-    color: black;
+    background-color: #f2f5f3;
+    color: #050000;
 }
 .container {
     list-style: none;
@@ -17,7 +17,7 @@ nav {
 }
 
 .container li a{
-    color: black;
+    color: #050000;
     font-weight: 300;
     letter-spacing: 2px;
     text-decoration: none;
@@ -25,6 +25,8 @@ nav {
     display: inline-block;
     width: 100%;
     text-align: center;
+    text-transform: uppercase;
+    font-family: "News Gothic No 2",sans-serif
 }
 
 @media all and (max-width: 600px) {
@@ -44,4 +46,37 @@ nav {
       flex-basis: 100%;
     }
 
+}
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 400px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
