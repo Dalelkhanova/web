@@ -1,28 +1,29 @@
 import { Injectable } from '@angular/core';
 import { Books } from './books';
-import { booksList} from './books-list';
-import { CATEGORIES } from './categories-list';
-import {Observable, of} from 'rxjs'
+import {Observable, of} from 'rxjs';
+import { HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BooksListService {
 
-  books = booksList
-  categories = CATEGORIES;
+  private booksUrl = 'api/books';
+  private categoriesUrl = 'api/categories';
+  books: Books[];
 
-  constructor() { }
+  constructor(
+    private http: HttpClient) { }
 
   getBooksList(): Observable<Books[]> {
-    return of(this.books);
+    return this.http.get<Books[]>(this.booksUrl);
   }
-  getBooksByCategory(id): Observable<Books[]>{
-    const neededBooks = this.books.filter(book => book.category === id);
-    return of(neededBooks);
+  getBooksByCategory(id: number): Observable<Books[]> {
+    const url = `${this.booksUrl}/?category=${id}`;
+    return this.http.get<Books[]>(url);
   }
-  getCategoryName(id): Observable<any>{
-    const category = this.categories.find(c => c.id===id);
-    return of(category);
+  getCategoryName(id: number): Observable<any> {
+    const url = `${this.categoriesUrl}/${id}`;
+    return this.http.get(url);
   }
 }

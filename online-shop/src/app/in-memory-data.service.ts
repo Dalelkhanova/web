@@ -20,7 +20,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {id: 9, name: "Satire"},
       {id: 10, name: "Guide"}
     ];
-    const clothes = [
+    const books = [
       {
         id: 1,
         name: 'BARRAGÁN GUIDE; BARRAGAN FOUNDATION',
@@ -43,7 +43,7 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         id: 3,
-        name: 'JOE COLOMBO; THE VITRA DESIGN MUSEUM: LARIENNALE DI MILANO',
+        name: 'JOE COLOMBO; THE VITRA DESIGN MUSEUM: LARIENNALE DI',
         imageLink: 'https://cdn.shopify.com/s/files/1/0880/2454/products/IMG_9719_800x.jpg?v=1586292548', 
         imageLink2:'https://cdn.shopify.com/s/files/1/0880/2454/products/IMG_9720_800x.jpg?v=1586292600',
         imageLink3:'https://cdn.shopify.com/s/files/1/0880/2454/products/IMG_9728_800x.jpg?v=1585860715',
@@ -183,7 +183,7 @@ export class InMemoryDataService implements InMemoryDbService {
       },
     ]
 
-    return {categories, clothes};
+    return {categories, books};
   }
   genId<T extends Category | Books>(myTable: T[]): number {
     return myTable.length > 0 ? Math.max(...myTable.map(t => t.id)) + 1 : 11;
