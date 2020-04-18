@@ -1,7 +1,7 @@
 .booksItem{
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
+    flex-direction: column;
     margin-top: 5%;
 }
 .booksItem {
