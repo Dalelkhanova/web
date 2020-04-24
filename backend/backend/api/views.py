@@ -1,5 +1,6 @@
-from .models import Category, Books, Card
-from .serializers import CategoriesListSerializer, BooksListSerializer, CardSerializer
+from .models import Category, Books, User
+
+from .serializers import CategoriesListSerializer, BooksListSerializer, UserSerializer
 from rest_framework import status, generics
 from rest_framework.decorators import api_view
 from rest_framework.views import APIView
@@ -71,19 +72,6 @@ class BookDetails(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = BooksListSerializer
 
 
-@api_view(['GET'])
-def books_of_card(request):
-    try:
-        card = Card.objects.get(id=2)
-    except Card.DoesNotExist as e:
-        return Response({'error': str(e)})
-    if request.method == 'GET':
-        books = card.books.all()
-        serializer = BooksListSerializer(books, many=True)
-        return Response(serializer.data)
-
-
-
 class CategoriesListAPIView(APIView):
     def get(self, request):
         categories_list = Category.objects.all()
@@ -98,36 +86,22 @@ class CategoriesListAPIView(APIView):
         return Response(serializer.errors, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
-class BookInCard(APIView):
-    def get_object(self, id):
-        try:
-            return Books.objects.get(id=id)
-        except Books.DoesNotExist as e:
-            return Response({'error': str(e)})
-
-    def delete(self, request, pk):
-        book = self.get_object(pk)
-        card = Card.objects.get(id=2)
-        card.books.remove(book)
-        return Response({'DELETED': True})
-
-    def post(self, request, pk):
-        cloth = self.get_object(pk)
-        card = Card.objects.get(id=2)
-        card.clothes.add(cloth)
-        return Response({'ADDED': True})
+class newBooksList(APIView):
+    def get(self, request):
+        books_list = Books.objects.get_new_books()
+        serializer = BooksListSerializer(books_list, many=True)
+        return Response(serializer.data)
 
 
-@api_view(['GET'])
-def booksByCategory(request, id):
-    if request.method == 'GET':
-        books_list = Books.objects.all()
-        booksByCategory = []
-        for books in books_list:
-            if books.category.id == id:
-                serializer = BooksListSerializer(books)
-                booksByCategory.append(serializer.data)
-        return Response(booksByCategory)
+class newUsers(APIView):
+    def post(self, request):
+        serializer = UserSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-
-
+    def get(self, request):
+        user_list = User.objects.all()
+        serializer = UserSerializer(user_list, many=True)
+        return Response(serializer.data)

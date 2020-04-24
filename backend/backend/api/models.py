@@ -13,18 +13,6 @@ class User(models.Model):
         }
 
 
-class Manager(models.Model):
-    username = models.CharField(max_length=100)
-    password = models.CharField(max_length=50)
-
-    def to_json(self):
-        return {
-            'id': self.id,
-            'username': self.username,
-            'password': self.password
-        }
-
-
 class Category(models.Model):
     name = models.CharField(max_length=100)
 
@@ -48,7 +36,7 @@ class Books(models.Model):
     price = models.CharField(max_length=100, default='')
     description = models.TextField(default="description")
     new = models.BooleanField(default=True)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, default=1)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
 
     objects = newBooksManager()
 
@@ -63,6 +51,3 @@ class Books(models.Model):
             'category': self.category.id,
         }
 
-
-class Card(models.Model):
-    books = models.ManyToManyField(Books)

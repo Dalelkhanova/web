@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Category, Books, Card
+from .models import Category, Books, User
 
 
 class CategoriesListSerializer(serializers.Serializer):
@@ -19,16 +19,19 @@ class CategoriesListSerializer(serializers.Serializer):
 
 
 class BooksListSerializer(serializers.ModelSerializer):
-    category = serializers.ReadOnlyField(source='category.id')
-
     class Meta:
         model = Books
         fields = "__all__"
 
 
-class CardSerializer(serializers.ModelSerializer):
-    clothes = BooksListSerializer(many=True)
+class UserSerializer(serializers.Serializer):
+    id = serializers.IntegerField(read_only=True)
+    username = serializers.CharField()
+    password = serializers.CharField()
 
-    class Meta:
-        model = Card
-        fields = {'id', 'books'}
+    def create(self, validated_data):
+        user = User()
+        user.username = validated_data.get('username')
+        user.password = validated_data.get('password')
+        user.save()
+        return user
