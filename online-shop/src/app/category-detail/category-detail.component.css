@@ -42,12 +42,15 @@ ul{
     font-weight: 900;
 }
 #card{
-    width: 25%;
+    
+    margin-top: 5px;
+    width: 30%;
+    height: 35px;
     border-width: 1px;
-    border-color: burlywood;
+    border-color:rgb(168, 197, 186) ;
     border-radius: 5px;
     color: black;
-    background-color: wheat;
+    background-color: rgb(168, 197, 186);
 }
 .textBlock{
     text-align: center;

@@ -22,7 +22,7 @@ export class NewBooksComponent implements OnInit {
 
   ngOnInit(): void {
     this.getNewBooksList();
-    // this.getListOfClothes();
+    // this.getListOfBooks();
   }
 
   getNewBooksList(): void {

@@ -1,17 +1,15 @@
+<h2 id="title">Cart</h2>
 <div id = "cart">
-    <h2>Cart</h2>
-    <div *ngFor = "let books of booksFromCart" class = "booksClass">
-      <p>{{books.name}}</p>
-      <h3>
-        <img [src]="books.imageLink" class = "booksImage">
-        <p *ngIf = "books.description">
-          Description: {{books.description}}
-        </p>
-        <p>
-          Price: {{books.price}}
-        </p>
-        <button (click)= "deleteBooksFromCart(books)" >Delete from cart</button>
-      </h3>
-      <hr class = "booksDivider">
+  <div class="booksItem">
+  <div *ngFor = "let books of booksFromCart" class = "booksClass">
+    <div class="booksImage"><img [src]="books.imageLink" class = "booksImage"></div>
+      <div class="text">
+        <p class="textItems"> {{books.name}}</p>
+        <p class="textItems">Product ID: {{books.id}}</p>
+        <p class="textItems"> Price: {{books.price}}</p>
+        <button [routerLink]="['/registr']" id="order">CHECKOUT</button>
+        <a><button (click)= "deleteBooksFromCart(books)" class="delete" >DELETE</button></a>
+      </div>
     </div>
   </div>
+</div>

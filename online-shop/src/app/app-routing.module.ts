@@ -8,7 +8,7 @@ import { BooksDetailComponent } from './books-detail/books-detail.component';
 import { CategoryDetailComponent } from './category-detail/category-detail.component';
 import { RegistrComponent } from './registr/registr.component';
 import { LoginComponent } from './login/login.component';
-
+import { NewBooksComponent } from './new-books/new-books.component';
 
 const routes: Routes = [
   { path : '', component: HomeComponent},
@@ -18,11 +18,13 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'books/:booksId', component: BooksDetailComponent },
   { path: 'registr', component: RegistrComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'newBooks', component: NewBooksComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
+  
 })
 export class AppRoutingModule { }

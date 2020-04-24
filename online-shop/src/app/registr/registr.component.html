@@ -4,12 +4,10 @@
     </h2>
     <div id="container">
         <p>Email</p>
-        <input type="text" name="text">
+        <input type="text" name="text" [(ngModel)]="username">
         <p>Password</p>
-        <input type="password" name="psw">
-        <p>Confirm Password</p>
-        <input type="password" name="psw">
+        <input type="password" name="psw" [(ngModel)]="password">
         <p><input type="checkbox" checked>Email me about upcoming deals!</p>
-        <p><button type="login">SIGN UP</button></p>
+        <p><button type="login" (click)="registr()">SIGN UP</button></p>
     </div>
 </div>

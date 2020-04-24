@@ -1,16 +1,9 @@
 <nav id= "nav">
     <ul class="container">
       <li><a [routerLink]="['']">Home</a></li>
-      <li class="dropdown">
-        <a>Categories
-          <div class="dropdown-content" >
-            <div *ngFor = "let category of categories">
-              <a [routerLink]="['/categories/', category.id]">{{category.name}}</a>
-            </div>
-          </div>
-        </a>
-      </li>
+      <li><a [routerLink]="['categories']">Categories</a></li>   
       <li><a [routerLink]="['books']">All books</a></li>
+      <li><a [routerLink]="['newBooks']">New books</a></li>
       <li><a [routerLink]="['cart']">Cart</a></li>
       <li><a [routerLink]="['login']">Log In</a></li>
       <li><a [routerLink]="['registr']">Sign Up</a></li>

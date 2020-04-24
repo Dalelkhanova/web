@@ -1,32 +1,26 @@
 <div>
+  <h2 id="title">All books</h2>
 
-    <h2 id="title">Books</h2>
-  
-    <ul>
-      <li *ngFor = "let category of categories"
-          style="list-style-type: none" class = "categoriesListLi"><a [routerLink]="['/categories/', category.id]" class="categoryList">{{category.name}}</a></li>
-    </ul>
-    <div class="window">
-      <div class="booksItem">
-        <div *ngFor = "let books of booksList" class = "booksClass">
-          <div class="hovereffect">
-          <img [src]="books.image || books.imageLink" class = "booksImage"
-               (mousemove)="books.image = books.imageLink2"
-               (mouseleave)="books.image = books.imageLink" [routerLink]="['/books', books.id ]" >
-            <div class="overlay">
-              <button (click)= "onAddToCart(books)" id="card"><h2>Add to cart</h2></button>
-            </div>
-          <p (click)= "onSelect(books)" class="textBlock">
-            <a [routerLink]="['/books', books.id ]" class="nameStyle">{{books.name}}</a>
-            <br>
-            <a class="PriceStyle">
-              {{books.price}}</a><br>
-          </p>
-  
-        </div>
+  <ul>
+    <li *ngFor = "let category of categories"
+        style="list-style-type: none"><a [routerLink]="['/categories/', category.id]" class="categoryList">{{category.name}}</a></li>
+  </ul>
+  <div class="window">
+    <div class="booksItem">
+      <div *ngFor = "let books of booksList" class = "booksClass">
+
+        <img [src]="books.image || books.imageLink" class = "booksImage"
+             (mousemove)="books.image = books.imageLink2"
+             (mouseleave)="books.image = books.imageLink" [routerLink]="['/books', books.id ]" >
+        <p (click)= "onSelect(books)" class="textBlock">
+          <a [routerLink]="['/books', books.id ]" class="nameStyle">{{books.name}}</a>
+          <br>
+          <a class="PriceStyle">
+            {{books.price}}</a><br>
+          <button (click)= "onAddToCart(books)" id="card">Add to Cart</button>
+        </p>
+
       </div>
     </div>
   </div>
-  
-  </div>
-  
+</div>

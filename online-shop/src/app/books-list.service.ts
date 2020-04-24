@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Books } from './books';
-import {Observable, of} from 'rxjs';
+import {Observable} from 'rxjs';
 import { HttpClient} from '@angular/common/http';
 
 @Injectable({
@@ -8,8 +8,8 @@ import { HttpClient} from '@angular/common/http';
 })
 export class BooksListService {
 
-  private booksUrl = 'api/books';
-  private categoriesUrl = 'api/categories';
+  private booksUrl = 'http://127.0.0.1:8000/api/books';
+  private categoriesUrl = 'http://127.0.0.1:8000/api/categories';
   books: Books[];
 
   constructor(
@@ -19,11 +19,14 @@ export class BooksListService {
     return this.http.get<Books[]>(this.booksUrl);
   }
   getBooksByCategory(id: number): Observable<Books[]> {
-    const url = `${this.booksUrl}/?category=${id}`;
-    return this.http.get<Books[]>(url);
+    return this.http.get<Books[]>(`http://127.0.0.1:8000/api/categories/${id}/books`);
   }
   getCategoryName(id: number): Observable<any> {
     const url = `${this.categoriesUrl}/${id}`;
     return this.http.get(url);
   }
+  getNewBooksList(): Observable<Books[]> {
+    return this.http.get<Books[]>("http://127.0.0.1:8000/api/books/new");
+  }
+  
 }

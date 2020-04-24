@@ -10,12 +10,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CartComponent implements OnInit {
 
-  booksFromCart: Books[] = [];
+  booksFromCart: Books[];
 
   constructor(private route: ActivatedRoute, private cartService: CartService) { }
 
   ngOnInit(): void {
-    this.getBooksFromCart()
+    this.getBooksFromCart();
   }
 
   getBooksFromCart(): void {
@@ -25,4 +25,6 @@ export class CartComponent implements OnInit {
   deleteBooksFromCart(books: Books) {
     this.cartService.deleteBooksFromCart(books)
   }
+      
+
 }

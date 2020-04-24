@@ -29,7 +29,7 @@ export class InMemoryDataService implements InMemoryDbService {
         imageLink3:'https://cdn.shopify.com/s/files/1/0880/2454/products/IMG_9648_800x.png?v=1585942786',
         price: "$ 550.00 USD ",
         description: 'Switzerland. Editorial RM/Barragan Foundation. (2003). Book Condition: Fine.  184 pp. Scarce first edition. ',
-        category: 10,
+        category: 1,
       },
       {
         id: 2,
@@ -159,7 +159,7 @@ export class InMemoryDataService implements InMemoryDbService {
         imageLink3:"https://cdn.shopify.com/s/files/1/0880/2454/products/IMG_9769_800x.jpg?v=1586409807",
         price:"$ 200.00 USD",
         description:"London. John Murray. (1978). Hardcover. First Edition (Vols. 1 & 2 Second Printing). Book Set Condition: Fine. Dust Jackets: Fine. A rare complete six-volume set in excellent condition featuring correspondence letters between Lyttelton and Hart-Davis. George Lyttelton was a classics and literature master at Eton, where he taught Rupert Hart-Davis. 25 years after Eton the men began a weekly correspondence, which they maintained until Lyttelton's death in 1968. ",
-        category: 8,
+        category: 2,
       },
       {
         id:15,
@@ -179,7 +179,7 @@ export class InMemoryDataService implements InMemoryDbService {
         imageLink3:"https://cdn.shopify.com/s/files/1/0880/2454/products/IMG_2845_800x.jpg?v=1580176341",
         price:"$ 100.00 USD ",
         description:"Netherlands. Subvers-press. (1971). First Edition. Softcover. Book Condition: Fine. Sparse. Type-written poems using letterforms titled Nodiden. Created by Nahl Nucha, a pseudonym of Dutch poet, artist and museum director Wouter Kotte. Text in Dutch. Saddle stapled square book with cardstock cover. 25pp.",
-        category: 1,
+        category: 11,
       },
     ]
 

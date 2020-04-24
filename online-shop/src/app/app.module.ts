@@ -3,34 +3,38 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { NavComponent } from './nav/nav.component';
-import { CartComponent } from './cart/cart.component';
-import { NavBottomComponent } from './nav-bottom/nav-bottom.component';
 import { CategoriesComponent } from './categories/categories.component';
-import { CategoryDetailComponent } from './category-detail/category-detail.component';
-import { BooksDetailComponent } from './books-detail/books-detail.component';
-import { BooksListComponent } from './books-list/books-list.component';
-import { RegistrComponent } from './registr/registr.component';
 import { HomeComponent } from './home/home.component';
+import { BooksListComponent } from './books-list/books-list.component';
+import { CartComponent } from './cart/cart.component';
+import { NavComponent } from './nav/nav.component';
+import { BooksDetailComponent } from './books-detail/books-detail.component';
+import { CategoryDetailComponent } from './category-detail/category-detail.component';
+import { NavBottomComponent } from './nav-bottom/nav-bottom.component';
+import { RegistrComponent } from './registr/registr.component';
+import { LoginComponent } from './login/login.component';
+
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import {FormsModule} from '@angular/forms';
+import { NewBooksComponent } from './new-books/new-books.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    NavComponent,
-    CartComponent,
-    NavBottomComponent,
     CategoriesComponent,
-    CategoryDetailComponent,
-    BooksDetailComponent,
+    HomeComponent,
     BooksListComponent,
+    CartComponent,
+    NavComponent,
+    BooksDetailComponent,
+    CategoryDetailComponent,
+    NavBottomComponent,
     RegistrComponent,
-    HomeComponent
+    LoginComponent,
+    NewBooksComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,9 +42,10 @@ import { InMemoryDataService } from './in-memory-data.service';
     HttpClientModule,
     HttpClientModule,
 
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    )
+    // HttpClientInMemoryWebApiModule.forRoot(
+    //     InMemoryDataService, {dataEncapsulation: false}
+    // ),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
