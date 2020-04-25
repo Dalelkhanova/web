@@ -1,8 +1,10 @@
+from rest_framework.permissions import IsAuthenticated
+
 from .models import Category, Books, User
 
 from .serializers import CategoriesListSerializer, BooksListSerializer, UserSerializer
 from rest_framework import status, generics
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
@@ -25,20 +27,6 @@ def category(request, id):
     if request.method == 'DELETE':
         category.delete()
         return Response({'deleted': True})
-
-
-class BooksListAPIView(APIView):
-    def get(self, request):
-        books_list = Books.objects.all()
-        serializer = BooksListSerializer(books_list, many=True)
-        return Response(serializer.data)
-
-    def post(self, request):
-        serializer = BooksListSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 @api_view(['GET', 'POST'])
@@ -86,6 +74,7 @@ class CategoriesListAPIView(APIView):
         return Response(serializer.errors, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
+@permission_classes([IsAuthenticated])
 class newBooksList(APIView):
     def get(self, request):
         books_list = Books.objects.get_new_books()

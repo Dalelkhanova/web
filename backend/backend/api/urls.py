@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from .views import books, books_of_category, BookDetails, category, BooksListAPIView, CategoriesListAPIView, newBooksList, newUsers
+from .views import books, books_of_category, BookDetails, category, CategoriesListAPIView, newBooksList, newUsers
 from rest_framework_jwt.views import obtain_jwt_token
 
 urlpatterns = [
