@@ -13,6 +13,11 @@ import { CategoriesService } from '../categories.service';
 })
 export class NewBooksComponent implements OnInit {
 
+  logged = false;
+
+  username = '';
+  password = '';
+
   constructor(private route: ActivatedRoute, private booksListService: BooksListService, private cartService: CartService, private categoriesService: CategoriesService) { }
 
   booksList: Books[];
@@ -23,6 +28,10 @@ export class NewBooksComponent implements OnInit {
   ngOnInit(): void {
     this.getNewBooksList();
     // this.getListOfBooks();
+    const token = localStorage.getItem('token');
+    if (token) {
+      this.logged = true;
+    }
   }
 
   getNewBooksList(): void {
@@ -30,12 +39,24 @@ export class NewBooksComponent implements OnInit {
   }
 
   onAddToCart(books: Books): void {
-    this.cartService.addBooksToCart(books).subscribe();
+    this.cartService.addBooksToCart(books);
   }
 
 
   onSelect(books: Books): void {
     this.selectedBooks = books;
+  }
+
+  login() {
+    this.categoriesService.login(this.username, this.password).subscribe(res => {
+
+      localStorage.setItem('token', res.token);
+
+      this.logged = true;
+
+      this.username = '';
+      this.password = '';
+    });
   }
 
 }

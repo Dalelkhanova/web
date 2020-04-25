@@ -13,7 +13,8 @@ import { CategoryDetailComponent } from './category-detail/category-detail.compo
 import { NavBottomComponent } from './nav-bottom/nav-bottom.component';
 import { RegistrComponent } from './registr/registr.component';
 import { LoginComponent } from './login/login.component';
-
+import {HTTP_INTERCEPTORS} from "@angular/common/http";
+import {AuthInterceptor} from "./auth.interceptor";
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
@@ -40,14 +41,20 @@ import { NewBooksComponent } from './new-books/new-books.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    HttpClientModule,
+   
 
     // HttpClientInMemoryWebApiModule.forRoot(
     //     InMemoryDataService, {dataEncapsulation: false}
     // ),
     FormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -60,3 +60,14 @@ ul{
 .bookList{
   transform: translate(0%, 2%);
 }
+#order{
+  margin-left: 45%;
+  height: 35px;
+  width: 10%;
+  background-color: black;
+  border-width: 0px;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: x-small;
+}

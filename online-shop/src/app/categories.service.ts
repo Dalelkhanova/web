@@ -15,18 +15,18 @@ export class CategoriesService {
     private http: HttpClient) { }
 
   getCategories(): Observable<Category[]> {
-    return this.http.get<Category[]>('http://127.0.0.1:8000/api/categories');
+    return this.http.get<Category[]>('http://localhost:8000/api/categories');
   }
 
   login(username, password): Observable<LoginResponse> {
-    return this.http.post<LoginResponse>('http://127.0.0.1:8000/api/login/', {
+    return this.http.post<LoginResponse>('http://localhost:8000/api/login/', {
       username,
       password
     });
   }
 
   registr(username, password): Observable<RegistrationResponse> {
-    return this.http.post<RegistrationResponse>('http://127.0.0.1:8000/api/newusers/', {
+    return this.http.post<RegistrationResponse>('http://localhost:8000/api/newusers/', {
       username,
       password
     });

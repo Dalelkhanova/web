@@ -7,12 +7,13 @@
     <p>Password</p>
     <input type="text" [(ngModel)]="password">
     <p><button (click)="login()">SIGN IN</button></p>
-  </div>
+</div>
   
-  <div *ngIf="logged" class="login">
-    <h2>
-      You're signed in
-    </h2>
+<div *ngIf="logged" class="login">
+  <h1>
+    You're signed in!
+  </h1>
+  <router-outlet></router-outlet>
     <br>
     <button (click)="logout()">LOGOUT</button>
-  </div>
+</div>
